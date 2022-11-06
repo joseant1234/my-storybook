@@ -3,12 +3,13 @@ import { MyLabel } from "../../components/MyLabel";
 
 // con title se dice a storybook que se coloque en el directorio 'UI' el componente
 // para poner las opciones size: { control: 'select', options: ['normal', 'h1'] }
+// para poner selector de color fontColor: { control: 'color' }
 export default {
     title: 'UI/MyLabel',
     component: MyLabel,
     argTypes: {
         size: { control: 'select' },
-        color: { control: 'select' }
+        color: { control: 'select' },
     }
 } as ComponentMeta<typeof MyLabel>
 
@@ -38,4 +39,10 @@ export const Tertiary = Template.bind({});
 Tertiary.args = {
     size: 'normal',
     color: 'tertiary'
+}
+
+export const CustomFontColor = Template.bind({})
+CustomFontColor.args = {
+    size: 'h1',
+    fontColor: '#5517ac',
 }
